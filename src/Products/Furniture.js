@@ -7,7 +7,7 @@ export default function Furniture() {
   const[products,setProducts]=useState([]);
 
   const getData = () => {
-    fetch("https://web-shopp.herokuapp.com/data/furniture")
+    fetch("https://ecomm-bend.onrender.com/data/furniture")
       .then((response) => response.json())
       .then((data) => setProducts(data));
   };
@@ -18,7 +18,7 @@ export default function Furniture() {
   const handleSubmit=(item)=>{
     axios
     .post(
-      "https://web-shopp.herokuapp.com/data/carts/post",
+      "https://ecomm-bend.onrender.com/data/carts/post",
       JSON.stringify(item),
       {
         headers: {

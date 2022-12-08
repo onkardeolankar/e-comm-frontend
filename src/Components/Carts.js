@@ -39,7 +39,7 @@ export default function Carts({setShow,setCount}) {
   const [products, setProducts] = useState([]);
 
   const getData = () => {
-    fetch("https://web-shopp.herokuapp.com/data/carts")
+    fetch("https://ecomm-bend.onrender.com/data/carts")
       .then((response) => response.json())
       .then((data) => {setProducts(data);setCount(data.length)});
   };
@@ -49,7 +49,7 @@ export default function Carts({setShow,setCount}) {
 
   const handleDelete = (id) => {
     axios
-      .delete("https://web-shopp.herokuapp.com/data/carts/delete/" + id)
+      .delete("https://ecomm-bend.onrender.com/data/carts/delete/" + id)
       .then((data) => getData());
   };
 
@@ -101,7 +101,7 @@ export default function Carts({setShow,setCount}) {
         <h2 className="cart-total">
           <div >{`${"Cart Total:"} ${total} ${"₹"}`}</div>
           <StripeCheckout
-            stripeKey="pk_test_51LqakBSH7Xqmg7IeNjL4893Y4nDuyjYw910LmfSDqSMRK18NZnEqDGuWCXJPt53tzN5UYNTNOnUDKHWyd3pJI8pg00Kdv6YqKd"
+            stripeKey="pk_test_51M6WP4SAH7kFRzImXV6IuGXz30quoFYoNKADXWomxk3YGonTwxCKdWaS8kfLHaV8hhoUZ8UJ3zd4u4cE7TLKUT1p00wlhOoSTx"
             token={makepayment}
             name="Card Details"
             amount={allprice}

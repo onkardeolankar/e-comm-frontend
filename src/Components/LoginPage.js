@@ -48,7 +48,7 @@ export default function LoginPage() {
   });
 
   const login = async (userDetails) => {
-  const data=await fetch("https://web-shopp.herokuapp.com/users/login",{
+  const data=await fetch("https://ecomm-bend.onrender.com/users/login",{
       method:'POST',
       headers: {
         "Content-type": "application/json",
@@ -76,7 +76,7 @@ export default function LoginPage() {
   const handleSubmits = () => {
     axios
       .post(
-        "https://web-shopp.herokuapp.com/users/register",
+        "https://ecomm-bend.onrender.com/users/register",
         JSON.stringify(register),
         {
           headers: {
